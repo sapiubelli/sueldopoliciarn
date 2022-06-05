@@ -37,10 +37,18 @@ CALCULOS
 <h1><strong>SUELDO DE PERSONAL DE SEGURIDAD</strong></h1>
 <p>Sergio Ariel Piubelli</p>
 <p><strong>NOTA</strong>: Falta saber como se calcula el item 366</p>
-<table width="400" border="1" cellpadding="0" cellspacing="0">
+<table border="1" cellpadding="0" cellspacing="0">
   <tr>
-    <td scope="col">Punto policial:</td>
-    <th align="left" scope="col"><input type="text" id="punto" value="434.2676667"></th>
+    <td scope="col">Punto policial actual:</td>
+    <th align="left" scope="col"><input type="text" id="punto" value="434.2676667" /></th>
+  </tr>
+  <tr>
+    <td scope="col">Aumento  al punto policial</td>
+    <th align="left" scope="col"><input type="text" id="punto2" value="0"  style="width:60px"/></th>
+  </tr>
+  <tr>
+    <td scope="row">Nuevo valor punto con aumento</td>
+    <td align="left"><input type="text" id="punto3" value="0" /></td>
   </tr>
   <tr>
     <td scope="row">Titulo</td>
@@ -59,11 +67,11 @@ CALCULOS
   </tr>
   <tr>
     <td scope="row">Cantidad de hijos: </td>
-    <td align="left"><input type="number" id="c_hijos" value="0" min="0" max="10" style="width:60px" onkeydown="return false" /></td>
+    <td align="left"><input type="number" id="c_hijos" value="0" min="0" max="10" style="width:60px" /></td>
   </tr>
   <tr>
     <td scope="row">Cuota alimentaria</td>
-    <td align="left"><input type="number" id="c_cuota" value="0" min="0" max="50" style="width:60px" onkeydown="return false" />
+    <td align="left"><input type="number" id="c_cuota" value="0" min="0" max="50" style="width:60px" />
       %, en caso no de tener dejar cero</td>
   </tr>
   <tr>

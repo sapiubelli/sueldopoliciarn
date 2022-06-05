@@ -1,31 +1,39 @@
 function fnc_ver() {
 
+
+
+document.getElementById("punto3").value = parseFloat(document.getElementById("punto").value) +
+( parseFloat(document.getElementById("punto").value) * parseFloat(document.getElementById("punto2").value) / 100 )
+;
+
+
+
 //*****************************************//
 //*****************************************//
 //ASIGNACION CARGO/GRADO
 //*****************************************//
 //*****************************************//
 
-//SUBOFICIALES				 
-document.getElementById("1_1").innerHTML = (20 * (document.getElementById("punto").value)).toFixed(2);
-document.getElementById("2_1").innerHTML = (25 * document.getElementById("punto").value).toFixed(2);
-document.getElementById("3_1").innerHTML = (30 * document.getElementById("punto").value).toFixed(2);
-document.getElementById("4_1").innerHTML = (35 * document.getElementById("punto").value).toFixed(2);
-document.getElementById("5_1").innerHTML = (45 * document.getElementById("punto").value).toFixed(2);
-document.getElementById("6_1").innerHTML = (50 * document.getElementById("punto").value).toFixed(2);
-document.getElementById("7_1").innerHTML = (60 * document.getElementById("punto").value).toFixed(2);
-document.getElementById("8_1").innerHTML = (65 * document.getElementById("punto").value).toFixed(2);
+//SUBOFICIALES				
+document.getElementById("1_1").innerHTML = (20 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("2_1").innerHTML = (25 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("3_1").innerHTML = (30 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("4_1").innerHTML = (35 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("5_1").innerHTML = (45 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("6_1").innerHTML = (50 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("7_1").innerHTML = (60 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("8_1").innerHTML = (65 * document.getElementById("punto3").value).toFixed(2);
 
 //OFICIALES
-document.getElementById("9_1").innerHTML = (30 * document.getElementById("punto").value).toFixed(2);
-document.getElementById("10_1").innerHTML = (35 * document.getElementById("punto").value).toFixed(2);
-document.getElementById("11_1").innerHTML = (45 * document.getElementById("punto").value).toFixed(2);
-document.getElementById("12_1").innerHTML = (55 * document.getElementById("punto").value).toFixed(2);
-document.getElementById("13_1").innerHTML = (75 * document.getElementById("punto").value).toFixed(2);
-document.getElementById("14_1").innerHTML = (85 * document.getElementById("punto").value).toFixed(2);
-document.getElementById("15_1").innerHTML = (100 * document.getElementById("punto").value).toFixed(2);
-document.getElementById("16_1").innerHTML = (110 * document.getElementById("punto").value).toFixed(2);
-document.getElementById("17_1").innerHTML = (120 * document.getElementById("punto").value).toFixed(2);
+document.getElementById("9_1").innerHTML = (30 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("10_1").innerHTML = (35 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("11_1").innerHTML = (45 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("12_1").innerHTML = (55 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("13_1").innerHTML = (75 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("14_1").innerHTML = (85 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("15_1").innerHTML = (100 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("16_1").innerHTML = (110 * document.getElementById("punto3").value).toFixed(2);
+document.getElementById("17_1").innerHTML = (120 * document.getElementById("punto3").value).toFixed(2);
 
 //SUBJEFE / JEFE
 document.getElementById("18_1").innerHTML = (parseFloat(document.getElementById("17_1").innerHTML * 5 / 100) + parseFloat(document.getElementById("17_1").innerHTML)).toFixed(2);
