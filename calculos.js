@@ -1732,6 +1732,38 @@ parseFloat(document.getElementById("19_424").innerHTML)
 
 
 
+
+//*****************************************//
+//*****************************************//
+// SALARIO FAMILIAR
+//*****************************************//
+//*****************************************//
+
+//SUBOFICIALES				 
+document.getElementById("1_sal").innerHTML = document.getElementById("1_201").innerHTML;
+document.getElementById("2_sal").innerHTML = document.getElementById("2_201").innerHTML;
+document.getElementById("3_sal").innerHTML = document.getElementById("3_201").innerHTML;
+document.getElementById("4_sal").innerHTML = document.getElementById("4_201").innerHTML;
+document.getElementById("5_sal").innerHTML = document.getElementById("5_201").innerHTML;
+document.getElementById("6_sal").innerHTML = document.getElementById("6_201").innerHTML;
+document.getElementById("7_sal").innerHTML = document.getElementById("7_201").innerHTML;
+document.getElementById("8_sal").innerHTML = document.getElementById("8_201").innerHTML;
+
+document.getElementById("9_sal").innerHTML = document.getElementById("9_201").innerHTML;
+document.getElementById("10_sal").innerHTML = document.getElementById("10_201").innerHTML;
+document.getElementById("11_sal").innerHTML = document.getElementById("11_201").innerHTML;
+document.getElementById("12_sal").innerHTML = document.getElementById("12_201").innerHTML;
+document.getElementById("13_sal").innerHTML = document.getElementById("13_201").innerHTML;
+document.getElementById("14_sal").innerHTML = document.getElementById("14_201").innerHTML;
+document.getElementById("15_sal").innerHTML = document.getElementById("15_201").innerHTML;
+document.getElementById("16_sal").innerHTML = document.getElementById("16_201").innerHTML;
+document.getElementById("17_sal").innerHTML = document.getElementById("17_201").innerHTML;
+
+document.getElementById("18_sal").innerHTML = document.getElementById("18_201").innerHTML;
+document.getElementById("19_sal").innerHTML = document.getElementById("19_201").innerHTML;
+
+
+
 //*****************************************//
 //*****************************************//
 // NETO A COBRAR
@@ -1741,12 +1773,14 @@ parseFloat(document.getElementById("19_424").innerHTML)
 //SUBOFICIALES				 
 document.getElementById("1_neto").innerHTML =(
 parseFloat(document.getElementById("1_ta").innerHTML) + 
+parseFloat(document.getElementById("1_sal").innerHTML) + 
 parseFloat(document.getElementById("1_tsa").innerHTML) - 
 parseFloat(document.getElementById("1_des").innerHTML)
 ).toFixed(2);
 
 document.getElementById("2_neto").innerHTML =(
 parseFloat(document.getElementById("2_ta").innerHTML) + 
+parseFloat(document.getElementById("2_sal").innerHTML) + 
 parseFloat(document.getElementById("2_tsa").innerHTML) - 
 parseFloat(document.getElementById("2_des").innerHTML)
 ).toFixed(2);
@@ -1754,6 +1788,7 @@ parseFloat(document.getElementById("2_des").innerHTML)
 
 document.getElementById("3_neto").innerHTML =(
 parseFloat(document.getElementById("3_ta").innerHTML) + 
+parseFloat(document.getElementById("3_sal").innerHTML) + 
 parseFloat(document.getElementById("3_tsa").innerHTML) - 
 parseFloat(document.getElementById("3_des").innerHTML)
 ).toFixed(2);
@@ -1761,6 +1796,7 @@ parseFloat(document.getElementById("3_des").innerHTML)
 
 document.getElementById("4_neto").innerHTML =(
 parseFloat(document.getElementById("4_ta").innerHTML) + 
+parseFloat(document.getElementById("4_sal").innerHTML) + 
 parseFloat(document.getElementById("4_tsa").innerHTML) - 
 parseFloat(document.getElementById("4_des").innerHTML)
 ).toFixed(2);
@@ -1768,6 +1804,7 @@ parseFloat(document.getElementById("4_des").innerHTML)
 
 document.getElementById("5_neto").innerHTML =(
 parseFloat(document.getElementById("5_ta").innerHTML) + 
+parseFloat(document.getElementById("5_sal").innerHTML) + 
 parseFloat(document.getElementById("5_tsa").innerHTML) - 
 parseFloat(document.getElementById("5_des").innerHTML)
 ).toFixed(2);
@@ -1775,6 +1812,7 @@ parseFloat(document.getElementById("5_des").innerHTML)
 
 document.getElementById("6_neto").innerHTML =(
 parseFloat(document.getElementById("6_ta").innerHTML) + 
+parseFloat(document.getElementById("6_sal").innerHTML) + 
 parseFloat(document.getElementById("6_tsa").innerHTML) - 
 parseFloat(document.getElementById("6_des").innerHTML)
 ).toFixed(2);
@@ -1782,6 +1820,7 @@ parseFloat(document.getElementById("6_des").innerHTML)
 
 document.getElementById("7_neto").innerHTML =(
 parseFloat(document.getElementById("7_ta").innerHTML) + 
+parseFloat(document.getElementById("7_sal").innerHTML) + 
 parseFloat(document.getElementById("7_tsa").innerHTML) - 
 parseFloat(document.getElementById("7_des").innerHTML)
 ).toFixed(2);
@@ -1789,6 +1828,7 @@ parseFloat(document.getElementById("7_des").innerHTML)
 
 document.getElementById("8_neto").innerHTML =(
 parseFloat(document.getElementById("8_ta").innerHTML) + 
+parseFloat(document.getElementById("8_sal").innerHTML) + 
 parseFloat(document.getElementById("8_tsa").innerHTML) - 
 parseFloat(document.getElementById("8_des").innerHTML)
 ).toFixed(2);
@@ -1796,6 +1836,7 @@ parseFloat(document.getElementById("8_des").innerHTML)
 
 document.getElementById("9_neto").innerHTML =(
 parseFloat(document.getElementById("9_ta").innerHTML) + 
+parseFloat(document.getElementById("9_sal").innerHTML) + 
 parseFloat(document.getElementById("9_tsa").innerHTML) - 
 parseFloat(document.getElementById("9_des").innerHTML)
 ).toFixed(2);
@@ -1803,6 +1844,7 @@ parseFloat(document.getElementById("9_des").innerHTML)
 
 document.getElementById("10_neto").innerHTML =(
 parseFloat(document.getElementById("10_ta").innerHTML) + 
+parseFloat(document.getElementById("10_sal").innerHTML) + 
 parseFloat(document.getElementById("10_tsa").innerHTML) - 
 parseFloat(document.getElementById("10_des").innerHTML)
 ).toFixed(2);
@@ -1810,6 +1852,7 @@ parseFloat(document.getElementById("10_des").innerHTML)
 
 document.getElementById("11_neto").innerHTML =(
 parseFloat(document.getElementById("11_ta").innerHTML) + 
+parseFloat(document.getElementById("11_sal").innerHTML) + 
 parseFloat(document.getElementById("11_tsa").innerHTML) - 
 parseFloat(document.getElementById("11_des").innerHTML)
 ).toFixed(2);
@@ -1817,6 +1860,7 @@ parseFloat(document.getElementById("11_des").innerHTML)
 
 document.getElementById("12_neto").innerHTML =(
 parseFloat(document.getElementById("12_ta").innerHTML) + 
+parseFloat(document.getElementById("12_sal").innerHTML) + 
 parseFloat(document.getElementById("12_tsa").innerHTML) - 
 parseFloat(document.getElementById("12_des").innerHTML)
 ).toFixed(2);
@@ -1824,6 +1868,7 @@ parseFloat(document.getElementById("12_des").innerHTML)
 
 document.getElementById("13_neto").innerHTML =(
 parseFloat(document.getElementById("13_ta").innerHTML) + 
+parseFloat(document.getElementById("13_sal").innerHTML) + 
 parseFloat(document.getElementById("13_tsa").innerHTML) - 
 parseFloat(document.getElementById("13_des").innerHTML)
 ).toFixed(2);
@@ -1831,6 +1876,7 @@ parseFloat(document.getElementById("13_des").innerHTML)
 
 document.getElementById("14_neto").innerHTML =(
 parseFloat(document.getElementById("14_ta").innerHTML) + 
+parseFloat(document.getElementById("14_sal").innerHTML) + 
 parseFloat(document.getElementById("14_tsa").innerHTML) - 
 parseFloat(document.getElementById("14_des").innerHTML)
 ).toFixed(2);
@@ -1838,6 +1884,7 @@ parseFloat(document.getElementById("14_des").innerHTML)
 
 document.getElementById("15_neto").innerHTML =(
 parseFloat(document.getElementById("15_ta").innerHTML) + 
+parseFloat(document.getElementById("15_sal").innerHTML) + 
 parseFloat(document.getElementById("15_tsa").innerHTML) - 
 parseFloat(document.getElementById("15_des").innerHTML)
 ).toFixed(2);
@@ -1845,6 +1892,7 @@ parseFloat(document.getElementById("15_des").innerHTML)
 
 document.getElementById("16_neto").innerHTML =(
 parseFloat(document.getElementById("16_ta").innerHTML) + 
+parseFloat(document.getElementById("16_sal").innerHTML) + 
 parseFloat(document.getElementById("16_tsa").innerHTML) - 
 parseFloat(document.getElementById("16_des").innerHTML)
 ).toFixed(2);
@@ -1852,6 +1900,7 @@ parseFloat(document.getElementById("16_des").innerHTML)
 
 document.getElementById("17_neto").innerHTML =(
 parseFloat(document.getElementById("17_ta").innerHTML) + 
+parseFloat(document.getElementById("17_sal").innerHTML) + 
 parseFloat(document.getElementById("17_tsa").innerHTML) - 
 parseFloat(document.getElementById("17_des").innerHTML)
 ).toFixed(2);
@@ -1859,6 +1908,7 @@ parseFloat(document.getElementById("17_des").innerHTML)
 
 document.getElementById("18_neto").innerHTML =(
 parseFloat(document.getElementById("18_ta").innerHTML) + 
+parseFloat(document.getElementById("18_sal").innerHTML) + 
 parseFloat(document.getElementById("18_tsa").innerHTML) - 
 parseFloat(document.getElementById("18_des").innerHTML)
 ).toFixed(2);
@@ -1866,11 +1916,10 @@ parseFloat(document.getElementById("18_des").innerHTML)
 
 document.getElementById("19_neto").innerHTML =(
 parseFloat(document.getElementById("19_ta").innerHTML) + 
+parseFloat(document.getElementById("19_sal").innerHTML) + 
 parseFloat(document.getElementById("19_tsa").innerHTML) - 
 parseFloat(document.getElementById("19_des").innerHTML)
 ).toFixed(2);
-
-
 
 
 
