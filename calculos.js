@@ -1,6 +1,14 @@
 function fnc_ver() {
 
 
+var combo = document.getElementById("jerarquia");
+var selected = combo.options[combo.selectedIndex].text;
+document.getElementById("0_tujerarquia").innerHTML = selected;
+document.getElementById("0_tujerarquia2").innerHTML = selected;
+ 
+ 
+ 
+ 
  
 
 document.getElementById("punto3").value = parseFloat(document.getElementById("punto").value) +
@@ -253,7 +261,7 @@ document.getElementById("19_76").innerHTML = (document.getElementById("19_1").in
 if(document.getElementById("vivienda").value == 1){
 
 //TU JERARQUIA
-var c0_42 = c0_1 * document.getElementById("p_vivienda").value / 100;
+var c0_42 = document.getElementById("4_1").innerHTML * document.getElementById("p_vivienda").value / 100;
 document.getElementById("0_42").innerHTML = (c0_42).toFixed(2);
 
 
@@ -436,7 +444,7 @@ document.getElementById("0_115").innerHTML = (c0_115).toFixed(2);
 //*****************************************//
 
 //TU JERARQUIA
-var c0_190 = (c0_1 + c0_6 + c0_7 + c0_8 + c0_53 + c0_57 + c0_86) * document.getElementById("p_zona").value / 100;
+var c0_190 = (c0_1 + c0_6 + c0_7 + c0_8 + c0_42 + c0_53 + c0_57 + c0_86) * document.getElementById("p_zona").value / 100;
 document.getElementById("0_190").innerHTML = (c0_190).toFixed(2);
 
 
