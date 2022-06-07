@@ -1,6 +1,7 @@
 function fnc_ver() {
 
 
+ 
 
 document.getElementById("punto3").value = parseFloat(document.getElementById("punto").value) +
 ( parseFloat(document.getElementById("punto").value) * parseFloat(document.getElementById("punto2").value) / 100 )
@@ -13,6 +14,10 @@ document.getElementById("punto3").value = parseFloat(document.getElementById("pu
 //ASIGNACION CARGO/GRADO
 //*****************************************//
 //*****************************************//
+
+//TU JERARQUIA
+var c0_1 = document.getElementById("jerarquia").value * document.getElementById("punto3").value;
+document.getElementById("0_1").innerHTML = (c0_1).toFixed(2);
 
 //SUBOFICIALES				
 document.getElementById("1_1").innerHTML = (20 * document.getElementById("punto3").value).toFixed(2);
@@ -46,6 +51,10 @@ document.getElementById("19_1").innerHTML = (parseFloat(document.getElementById(
 // ANTIGUEDAD
 //*****************************************//
 //*****************************************//
+
+//TU JERARQUIA
+var c0_6 = document.getElementById("0_1").innerHTML * document.getElementById("p_antiguedad").value / 100 * document.getElementById("antiguedad").value;
+document.getElementById("0_6").innerHTML = (c0_6).toFixed(2);
 
 //SUBOFICIALES				 
 document.getElementById("1_6").innerHTML = (document.getElementById("1_1").innerHTML * document.getElementById("p_antiguedad").value / 100 * document.getElementById("1_antiguedad").value).toFixed(2);
@@ -81,6 +90,11 @@ document.getElementById("19_6").innerHTML = (document.getElementById("19_1").inn
 //*****************************************//
 //*****************************************//
 
+//TU JERARQUIA
+var c0_7 = document.getElementById("0_1").innerHTML * document.getElementById("titulo").value / 100;
+document.getElementById("0_7").innerHTML = (c0_7).toFixed(2);
+ 
+
 //SUBOFICIALES				 
 document.getElementById("1_7").innerHTML = (document.getElementById("1_1").innerHTML * document.getElementById("titulo").value / 100).toFixed(2);
 document.getElementById("2_7").innerHTML = (document.getElementById("2_1").innerHTML * document.getElementById("titulo").value / 100).toFixed(2);
@@ -113,6 +127,14 @@ document.getElementById("19_7").innerHTML = (document.getElementById("19_1").inn
 //DEDICACION EXCLUSIVA
 //*****************************************//
 //*****************************************//
+
+//TU JERARQUIA
+if(document.getElementById("jerarquia").value >= 45){
+var c0_8 = document.getElementById("p_dedicacion").value * document.getElementById("8_1").innerHTML / 100;
+}else{
+var c0_8 = document.getElementById("p_dedicacion").value * document.getElementById("4_1").innerHTML / 100;	
+}
+document.getElementById("0_8").innerHTML = (c0_8).toFixed(2);
 
 //SUBOFICIALES				 
 document.getElementById("1_8").innerHTML = (document.getElementById("p_dedicacion").value * document.getElementById("4_1").innerHTML / 100).toFixed(2);
@@ -149,6 +171,14 @@ document.getElementById("19_8").innerHTML = (document.getElementById("p_dedicaci
 //*****************************************//
 //*****************************************//
 
+//TU JERARQUIA
+if(document.getElementById("jerarquia").value >= 45){
+var c0_57 = document.getElementById("p_riesgo").value * document.getElementById("8_1").innerHTML / 100;
+}else{
+var c0_57 = document.getElementById("p_riesgo").value * document.getElementById("4_1").innerHTML / 100;
+}
+document.getElementById("0_57").innerHTML = (c0_57).toFixed(2);
+
 //SUBOFICIALES				 
 document.getElementById("1_57").innerHTML = (document.getElementById("p_riesgo").value * document.getElementById("4_1").innerHTML / 100).toFixed(2);
 document.getElementById("2_57").innerHTML = (document.getElementById("p_riesgo").value * document.getElementById("4_1").innerHTML / 100).toFixed(2);
@@ -184,6 +214,10 @@ document.getElementById("19_57").innerHTML = (document.getElementById("p_riesgo"
 //*****************************************//
 //*****************************************//
 
+//TU JERARQUIA
+var c0_76 = c0_1 * document.getElementById("p_extension").value / 100;
+document.getElementById("0_76").innerHTML = (c0_76).toFixed(2);
+
 //SUBOFICIALES				 
 document.getElementById("1_76").innerHTML = (document.getElementById("1_1").innerHTML * document.getElementById("p_extension").value / 100 ).toFixed(2);
 document.getElementById("2_76").innerHTML = (document.getElementById("2_1").innerHTML * document.getElementById("p_extension").value / 100 ).toFixed(2);
@@ -218,6 +252,11 @@ document.getElementById("19_76").innerHTML = (document.getElementById("19_1").in
 
 if(document.getElementById("vivienda").value == 1){
 
+//TU JERARQUIA
+var c0_42 = c0_1 * document.getElementById("p_vivienda").value / 100;
+document.getElementById("0_42").innerHTML = (c0_42).toFixed(2);
+
+
 //SUBOFICIALES				 
 document.getElementById("1_42").innerHTML = (document.getElementById("4_1").innerHTML * document.getElementById("p_vivienda").value / 100 ).toFixed(2);
 document.getElementById("2_42").innerHTML = (document.getElementById("4_1").innerHTML * document.getElementById("p_vivienda").value / 100 ).toFixed(2);
@@ -245,7 +284,10 @@ document.getElementById("19_42").innerHTML = (document.getElementById("17_1").in
 
 
 } else {
-	
+//TU JERARQUIA
+var c0_42 = 0;
+document.getElementById("0_42").innerHTML = (c0_42).toFixed(2);
+
 
 //SUBOFICIALES				 
 document.getElementById("1_42").innerHTML = 0;
@@ -275,15 +317,71 @@ document.getElementById("19_42").innerHTML = 0;
 
 
 
+//*****************************************//
+//*****************************************//
+// COMP SEG REMUNERA
+//*****************************************//
+//*****************************************//
+
+//TU JERARQUIA
+if(document.getElementById("jerarquia").value >= 45){
+var c0_53 = 6000;
+}else{
+var c0_53 = 7200;	
+}
+document.getElementById("0_53").innerHTML = (c0_53).toFixed(2);
 
 
 
+//*****************************************//
+//*****************************************//
+// SUMA REMUNERATIVA POLICIAL
+//*****************************************//
+//*****************************************//
+
+//TU JERARQUIA
+var c0_81 = 0;
+switch ( parseInt(document.getElementById("jerarquia").value) ) {
+  case 20:
+    c0_81 = 49000;
+    break;
+  case 25:
+    c0_81 = 47000;
+    break;
+  case 30:
+    c0_81 = 45000;
+    break;
+  case 35:
+    c0_81 = 42000;
+    break;
+  case 45:
+    c0_81 = 41998;
+    break;
+  case 50:
+    c0_81 = 41998;
+    break;	
+  case 60:
+    c0_81 = 41998;
+    break;	
+  case 65:
+    c0_81 = 41998;
+    break;			
+  default:
+    c0_81 = 0;
+    break;
+}
+document.getElementById("0_81").innerHTML = (c0_81).toFixed(2);
 
 //*****************************************//
 //*****************************************//
 // FUERZA DE SEGURIDAD
 //*****************************************//
 //*****************************************//
+
+//TU JERARQUIA
+var c0_86 = c0_1 * document.getElementById("p_fuerza").value / 100;
+document.getElementById("0_86").innerHTML = (c0_86).toFixed(2);
+
 
 //SUBOFICIALES				 
 document.getElementById("1_86").innerHTML = (document.getElementById("1_1").innerHTML * document.getElementById("p_fuerza").value / 100 ).toFixed(2);
@@ -314,6 +412,21 @@ document.getElementById("19_86").innerHTML = (document.getElementById("19_1").in
 
 
 
+//*****************************************//
+//*****************************************//
+// ADIC. REMUN. DCTO. 1700/03
+//*****************************************//
+//*****************************************//
+
+//TU JERARQUIA
+if(document.getElementById("jerarquia").value >= 45){
+var c0_115 = 223.36;
+}else{
+var c0_115 = 0;	
+}
+document.getElementById("0_115").innerHTML = (c0_115).toFixed(2);
+
+
 
 
 //*****************************************//
@@ -321,6 +434,11 @@ document.getElementById("19_86").innerHTML = (document.getElementById("19_1").in
 // ZONA DESFAVORABLE
 //*****************************************//
 //*****************************************//
+
+//TU JERARQUIA
+var c0_190 = (c0_1 + c0_6 + c0_7 + c0_8 + c0_53 + c0_57 + c0_86) * document.getElementById("p_zona").value / 100;
+document.getElementById("0_190").innerHTML = (c0_190).toFixed(2);
+
 
 //SUBOFICIALES				 
 document.getElementById("1_190").innerHTML = ((
@@ -541,6 +659,11 @@ parseInt(document.getElementById("19_86").innerHTML)
 // BONIF. POLICIA
 //*****************************************//
 //*****************************************//
+
+//TU JERARQUIA
+var c0_80 = (c0_1 + c0_6 + c0_7 + c0_8 + c0_57 + c0_76 + c0_42 + c0_190) * 31 / 100;
+document.getElementById("0_80").innerHTML = (c0_80).toFixed(2);
+
  
 //SUBOFICIALES				 
 document.getElementById("1_80").innerHTML = 
@@ -780,6 +903,10 @@ parseInt(document.getElementById("19_190").innerHTML)
 // TOTAL REMUNERATIVO
 //*****************************************//
 //*****************************************//
+
+//TU JERARQUIA
+var c0_tr = c0_1 + c0_6 + c0_7 + c0_8 + c0_53 + c0_57 + c0_76 + c0_42 + c0_80+ c0_81+ c0_86+ c0_115+ c0_190;
+document.getElementById("0_tr").innerHTML = (c0_tr).toFixed(2);
 
 
 //SUBOFICIALES				 
@@ -1120,6 +1247,9 @@ parseFloat(document.getElementById("19_190").innerHTML)
 //*****************************************//
 //*****************************************//
 
+//TU JERARQUIA
+document.getElementById("0_201").innerHTML = (document.getElementById("p_hijos").value * document.getElementById("c_hijos").value).toFixed(2);
+
 //SUBOFICIALES				 
 document.getElementById("1_201").innerHTML = (document.getElementById("p_hijos").value * document.getElementById("c_hijos").value).toFixed(2);
 document.getElementById("2_201").innerHTML = (document.getElementById("p_hijos").value * document.getElementById("c_hijos").value).toFixed(2);
@@ -1145,6 +1275,29 @@ document.getElementById("18_201").innerHTML = (document.getElementById("p_hijos"
 document.getElementById("19_201").innerHTML = (document.getElementById("p_hijos").value * document.getElementById("c_hijos").value).toFixed(2);
 
 
+
+//*****************************************//
+//*****************************************//
+//SUMA NO REMUNERA SEGURI
+//*****************************************//
+//*****************************************//
+
+//TU JERARQUIA
+var c0_366 = 0;
+document.getElementById("0_366").innerHTML = (c0_366).toFixed(2);
+
+//*****************************************//
+//*****************************************//
+//DECRETO 1142/11
+//*****************************************//
+//*****************************************//
+
+//TU JERARQUIA
+var c0_368 = 1545.4;
+document.getElementById("0_368").innerHTML = (c0_368).toFixed(2);
+
+
+
 //***************************************************************************************************************************//
 //***************************************************************************************************************************//
 //DESCUENTOS
@@ -1158,6 +1311,11 @@ document.getElementById("19_201").innerHTML = (document.getElementById("p_hijos"
 //IPROSS. AP.PERS.
 //*****************************************//
 //*****************************************//
+
+//TU JERARQUIA
+var c0_400 = document.getElementById("p_ipross").value * c0_tr / 100;
+document.getElementById("0_400").innerHTML = (c0_400).toFixed(2);
+
 
 //SUBOFICIALES				 
 document.getElementById("1_400").innerHTML = (document.getElementById("p_ipross").value * document.getElementById("1_tr").innerHTML / 100).toFixed(2);
@@ -1191,6 +1349,11 @@ document.getElementById("19_400").innerHTML = (document.getElementById("p_ipross
 //*****************************************//
 //*****************************************//
 
+//TU JERARQUIA
+var c0_406 = document.getElementById("p_appersprevpol").value * c0_tr / 100;
+document.getElementById("0_406").innerHTML = (c0_406).toFixed(2);
+
+
 //SUBOFICIALES				 
 document.getElementById("1_406").innerHTML = (document.getElementById("p_appersprevpol").value * document.getElementById("1_tr").innerHTML / 100).toFixed(2);
 document.getElementById("2_406").innerHTML = (document.getElementById("p_appersprevpol").value * document.getElementById("2_tr").innerHTML / 100).toFixed(2);
@@ -1219,9 +1382,26 @@ document.getElementById("19_406").innerHTML = (document.getElementById("p_appers
 
 //*****************************************//
 //*****************************************//
+//IAPS SEGURO OBLIG.
+//*****************************************//
+//*****************************************//
+
+//TU JERARQUIA
+var c0_414 = 1246.2;
+document.getElementById("0_414").innerHTML = (c0_414).toFixed(2);
+
+
+
+//*****************************************//
+//*****************************************//
 // CUOTA ALIMENTARIA %
 //*****************************************//
 //*****************************************//
+
+//TU JERARQUIA
+var c0_424 = (c0_tr + c0_366 + c0_368 - c0_400 - c0_406 - c0_414) * document.getElementById("c_cuota").value / 100;
+document.getElementById("0_424").innerHTML = (c0_424).toFixed(2);
+ 
 
 //SUBOFICIALES				 
 document.getElementById("1_424").innerHTML = ( 
@@ -1447,6 +1627,9 @@ parseFloat(document.getElementById("19_414").innerHTML)
 //*****************************************//
 //*****************************************//
 
+//TU JERARQUIA
+document.getElementById("0_ta").innerHTML = document.getElementById("0_tr").innerHTML;
+
 //SUBOFICIALES				 
 document.getElementById("1_ta").innerHTML = document.getElementById("1_tr").innerHTML;
 document.getElementById("2_ta").innerHTML = document.getElementById("2_tr").innerHTML;
@@ -1478,6 +1661,14 @@ document.getElementById("19_ta").innerHTML = document.getElementById("19_tr").in
 // TOTAL SIN APORTES
 //*****************************************//
 //*****************************************//
+
+
+//TU JERARQUIA
+document.getElementById("0_tsa").innerHTML =
+parseFloat(document.getElementById("0_310").innerHTML) + 
+parseFloat(document.getElementById("0_312").innerHTML) + 
+parseFloat(document.getElementById("0_366").innerHTML) + 
+parseFloat(document.getElementById("0_368").innerHTML);
 
 //SUBOFICIALES				 
 document.getElementById("1_tsa").innerHTML =
@@ -1602,6 +1793,14 @@ parseFloat(document.getElementById("19_368").innerHTML);
 // DESCUENTOS
 //*****************************************//
 //*****************************************//
+
+//TU JERARQUIA
+document.getElementById("0_des").innerHTML =(
+parseFloat(document.getElementById("0_400").innerHTML) + 
+parseFloat(document.getElementById("0_406").innerHTML) + 
+parseFloat(document.getElementById("0_414").innerHTML) + 
+parseFloat(document.getElementById("0_424").innerHTML)
+).toFixed(2);
 
 //SUBOFICIALES				 
 document.getElementById("1_des").innerHTML =(
@@ -1747,6 +1946,9 @@ parseFloat(document.getElementById("19_424").innerHTML)
 //*****************************************//
 //*****************************************//
 
+//TU JERARQUIA
+document.getElementById("0_sal").innerHTML = document.getElementById("0_201").innerHTML;
+
 //SUBOFICIALES				 
 document.getElementById("1_sal").innerHTML = document.getElementById("1_201").innerHTML;
 document.getElementById("2_sal").innerHTML = document.getElementById("2_201").innerHTML;
@@ -1777,6 +1979,15 @@ document.getElementById("19_sal").innerHTML = document.getElementById("19_201").
 // NETO A COBRAR
 //*****************************************//
 //*****************************************//
+
+//TU JERARQUIA
+document.getElementById("0_neto").innerHTML = (
+parseFloat(document.getElementById("0_ta").innerHTML) + 
+parseFloat(document.getElementById("0_sal").innerHTML) + 
+parseFloat(document.getElementById("0_tsa").innerHTML) - 
+parseFloat(document.getElementById("0_des").innerHTML)
+).toFixed(2);
+
 
 //SUBOFICIALES				 
 document.getElementById("1_neto").innerHTML =(

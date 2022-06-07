@@ -8,6 +8,8 @@
 
 
 <style>
+ 
+
 .table, th, td {
 font-family: arial;
 font-size:10px;
@@ -21,6 +23,7 @@ height:40px;
 
 </script>
 
+ 
 <!–– 
 *****************************************
 *****************************************
@@ -76,6 +79,23 @@ CALCULOS
       %, en caso no de tener dejar cero</td>
   </tr>
   <tr>
+    <td scope="row">Tu jerarquia</td>
+    <td align="left"><select name="jerarquia" id="jerarquia" value="0" style="width:200px">
+      <option value="20">AGENTE</option>
+      <option value="25">CABO</option>
+      <option value="30">CABO 1°</option>
+      <option value="35">SARGENTO</option>
+      <option value="45">SARGENTO 1°</option>
+      <option value="50">SARGENTO AYUDANTE</option>
+      <option value="60">SUBOFICIAL PRINCIPAL</option>
+      <option value="65">SUBOFICIAL MAYOR</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td scope="row">Años de antiguedad al 31 de diciembre</td>
+    <td align="left"><input type="text" id="antiguedad" value="1"  style="width:60px"/></td>
+  </tr>
+  <tr>
     <td scope="row">Contrato alquiler</td>
     <td align="left">
     
@@ -89,19 +109,218 @@ CALCULOS
     </td>
   </tr>
 </table>
-
 <p>
-<button onclick="fnc_ver()">VER CAMBIOS</button>
+  <button onclick="fnc_ver()">VER CAMBIOS</button>
+ 
 </p>
-<table width="100%%" border="0" cellpadding="0">
+ 
+<table width="100%" border="0" cellpadding="0">
   <tr>
     <td scope="col">&nbsp;</td>
+    <td width="50" scope="col">&nbsp;</td>
     <th scope="col">&nbsp;</th>
     <th scope="col">&nbsp;</th>
     <th scope="col">&nbsp;</th>
   </tr>
   <tr>
-    <td valign="top" scope="row"><table border="1" cellpadding="0" cellspacing="0" style="display:none">
+    <td valign="top" scope="row"><table border="1" cellpadding="0" cellspacing="0">
+      <tr align="center">
+        <td scope="col">&nbsp;</td>
+        <td scope="col">&nbsp;</td>
+        <td scope="col">TU JERARQUIA</td>
+        </tr>
+      <tr bgcolor="#A4A4A4">
+        <td scope="col"><strong>ITEM</strong></td>
+        <td scope="col"><strong>REMUNERATIVO</strong></td>
+        <td scope="col">&nbsp;</td>
+        </tr>
+      <tr bgcolor="#D6D6D6" style="display:none">
+        <td scope="row">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td height="56" scope="row">1</td>
+        <td>ASIG. CARGO/GRADO</td>
+        <td><p id="0_1"></p> </td>
+        </tr>
+      <tr>
+        <td scope="row">6</td>
+        <td>ANTIGUEDAD</td>
+        <td><p id="0_6"></p> </td>
+        </tr>
+      <tr>
+        <td scope="row">7</td>
+        <td>TITULO</td>
+        <td><p id="0_7"></p></td>
+        </tr>
+      <tr>
+        <td scope="row">8</td>
+        <td>DEDICACION EXCLUSIVA</td>
+        <td><p id="0_8"></p></td>
+        </tr>
+      <tr>
+        <td scope="row">42</td>
+        <td>BONIF.VIVIENDA</td>
+        <td><p id="0_42"></p></td>
+        </tr>
+      <tr>
+        <td scope="row">53</td>
+        <td>COMPENSAC SEGU REMUNERA</td>
+        <td><p id="0_53">7200</p></td>
+        </tr>
+      <tr>
+        <td scope="row">57</td>
+        <td>RIESGO PROFESIONAL</td>
+        <td><p id="0_57"></p></td>
+        </tr>
+      <tr>
+        <td scope="row">76</td>
+        <td>EXTENSION HORARIA</td>
+        <td><p id="0_76"></p></td>
+        </tr>
+      <tr>
+        <td scope="row">80</td>
+        <td>BONIF. POLICIA</td>
+        <td><p id="0_80">0</p></td>
+        </tr>
+      <tr>
+        <td scope="row">81</td>
+        <td>SUMA REMUNERATIVA POLICIAL</td>
+        <td><p id="0_81"> 49000 </p></td>
+        </tr>
+      <tr>
+        <td scope="row">86</td>
+        <td>FUERZA DE SEGURIDAD</td>
+        <td><p id="0_86">0</p></td>
+        </tr>
+      <tr>
+        <td height="32" scope="row">115</td>
+        <td>ADIC. REMUN. DCTO. 1700/03</td>
+        <td bgcolor="#D6D6D6"><p id="0_115">0</p></td>
+        </tr>
+      <tr>
+        <td scope="row">190</td>
+        <td>ZONA DESFAVORABLE</td>
+        <td><p id="0_190"></p></td>
+        </tr>
+      <tr bgcolor="#D6D6D6" style="display:no!ne">
+        <td scope="row">&nbsp;</td>
+        <td><strong>TOTAL REMUNERATIVOS</strong></td>
+        <td><p id="0_tr"></p></td>
+        </tr>
+      <tr>
+        <td scope="row">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td scope="row">310</td>
+        <td>INDUMENTARIA</td>
+        <td><p id="0_310">2311,5</p></td>
+        </tr>
+      <tr>
+        <td scope="row">312</td>
+        <td>PRESENTISMO</td>
+        <td><p id="0_312">2010</p></td>
+        </tr>
+      <tr>
+        <td scope="row">366</td>
+        <td>SUMA NO REMUNERA SEGURI</td>
+        <td><p id="0_366">0</p></td>
+        </tr>
+      <tr>
+        <td scope="row">368</td>
+        <td>DECRETO 1142/11</td>
+        <td><p id="0_368">1545,4</p></td>
+        </tr>
+      <tr>
+        <td scope="row">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td scope="row">201</td>
+        <td>HIJOS</td>
+        <td><p id="0_201"></p></td>
+        </tr>
+      <tr>
+        <td scope="row">207</td>
+        <td>AYUDA ESCOLAR</td>
+        <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td scope="row">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td scope="row">400</td>
+        <td>IPROSS. AP.PERS.</td>
+        <td><p id="0_400">0</p></td>
+        </tr>
+      <tr>
+        <td scope="row">406</td>
+        <td>AP.PERS.PREV.POLICIA</td>
+        <td><p id="0_406">0</p></td>
+        </tr>
+      <tr>
+        <td scope="row">407</td>
+        <td>UCP DIF.MAY.SUELDO</td>
+        <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td scope="row">414</td>
+        <td>IAPS SEGURO OBLIG.</td>
+        <td><p id="0_414">1246,2</p></td>
+        </tr>
+      <tr>
+        <td scope="row">424</td>
+        <td>CTA.ALIMENTARIA 424</td>
+        <td><p id="0_424">0</p></td>
+        </tr>
+      <tr>
+        <td scope="row">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td scope="row">&nbsp;</td>
+        <td>TOTAL CON APORTES</td>
+        <td><p id="0_ta">0</p></td>
+        </tr>
+      <tr>
+        <td scope="row">&nbsp;</td>
+        <td>TOTAL SIN APORTES</td>
+        <td><p id="0_tsa">0</p></td>
+        </tr>
+      <tr>
+        <td scope="row">&nbsp;</td>
+        <td>SALARIO FAMILIAR</td>
+        <td><p id="0_sal">0</p></td>
+        </tr>
+      <tr>
+        <td scope="row">&nbsp;</td>
+        <td>DESCUENTOS</td>
+        <td><p id="0_des">0</p></td>
+        </tr>
+      <tr>
+        <td scope="row">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>
+      <tr bgcolor="#66FF66">
+        <td scope="row">&nbsp;</td>
+        <td><strong>NETO A COBRAR</strong></td>
+        <td><p id="0_neto"><strong>0</strong></p></td>
+        </tr>
+      <tr>
+        <td scope="row">&nbsp;</td>
+        <td>VALES ALIMENTARIOS</td>
+        <td>&nbsp;</td>
+        </tr>
+    </table></td>
+    <td width="50" valign="top" scope="row"><table border="1" cellpadding="0" cellspacing="0" style="display:none">
         <tr align="center">
           <td scope="col">&nbsp;</td>
           <td scope="col">&nbsp;</td>
@@ -281,7 +500,7 @@ CALCULOS
         <td scope="col"><strong>SUBOF. PPPAL</strong></td>
         <td scope="col"><strong>SUBOF. MYR</strong></td>
       </tr>
-      <tr bgcolor="#D6D6D6">
+      <tr bgcolor="#D6D6D6" style="display:none">
         <td scope="row">&nbsp;</td>
         <td>&nbsp;</td>
         <td><input type="number" id="1_antiguedad" min="1" max="35" value="1" /></td>
