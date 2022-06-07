@@ -1996,6 +1996,11 @@ parseFloat(document.getElementById("0_tsa").innerHTML) -
 parseFloat(document.getElementById("0_des").innerHTML)
 ).toFixed(2);
 
+//TU JERARQUIA
+document.getElementById("0_neto2").innerHTML = "SUELDO A COBRAR: " + document.getElementById("0_neto").innerHTML;
+
+
+
 
 //SUBOFICIALES				 
 document.getElementById("1_neto").innerHTML =(
